@@ -27,6 +27,6 @@ window.onload = function(){
             alert("Tên và mật khẩu người dùng không được để dấu cách");
             return;
         }
-        window.location.href="../main_code/BTL_Game_Main.html";
+        window.location.href="main_code/BTL_Game_Main.html";
     })
 }
