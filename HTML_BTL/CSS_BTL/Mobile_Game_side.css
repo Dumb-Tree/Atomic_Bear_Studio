@@ -1,0 +1,414 @@
+.flex{
+    display:flex;
+}
+body{
+    background-color: #191b20;
+    width:225vw;
+    color:white;
+    margin:0;
+    padding:0;
+}
+nav{
+    margin:0;
+    padding:0;
+    width:215%;
+    max-width:235vw;
+}
+.playerMenuContainer{
+    position:relative;
+    width:100%; 
+}
+.playermenu{
+    display:none;
+    position:absolute;
+    right:0;
+    background:rgba(36,36,36, 1);
+    border: 2px solid rgb(113, 187, 230);
+    z-index:9999;
+}
+.show{
+    display:block;
+}
+/*Responsive CSS cho: bạn bè*/
+.friendlist-container{
+    position:relative;
+    width:100%;
+}
+.friendList{
+
+    position:absolute;
+    top:11%;
+    left:65%;
+    width:40%;
+    margin:0;
+    background:rgb(42, 45, 53);
+    animation:friendlisthide 0.5s linear;
+    z-index:9999;
+}
+/* Carousel */
+.carousel{
+    width:150%;
+}
+.side {
+    position: relative;
+    width: 220vw;
+    /* Chiều rộng 80% của viewport width */
+    height: 60vh;
+    /* Chiều cao 80% của viewport height */
+    bottom:0vh;
+    right:5rem;
+    margin:0;
+}
+
+.side>.carousel {
+    width: 180vw;
+    position: absolute;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    right: 0;
+    top: 1vh;
+}
+
+.carousel>.item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+/* Chỉ hiện phần tử đầu tiên */
+.carousel>.item:nth-child(1) {
+    display: initial;
+}
+
+
+.carousel>.item>.background {
+    object-fit: contain;
+    filter: brightness(0.7);
+    position: absolute;
+    width: 20%;
+    height: auto;
+    bottom: 10%;
+    right: 20%;
+}
+
+.carousel>.item>.content {
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 1rem;
+    position: absolute;
+    box-sizing: border-box;
+    width: 40%;
+    height: 100%;
+    top: 0%;
+    color: white;
+    mix-blend-mode: hard-light;
+    text-shadow: 1px 4px 3px black;
+    opacity: 0;
+}
+
+.carousel>.item>.content>.logo {
+    width: 50%;
+    height: 25%;
+    top: 0%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.carousel>.item>.content>.logo>img {
+    width: 100%;
+}
+
+.carousel>.item>.content>.available {
+    margin-bottom: 0;
+}
+
+.carousel>.item>.content>.description {
+    width: 100%;
+    height: 15%;
+    overflow: hidden;
+}
+
+.carousel>.item>.content button {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1.3rem 4.5rem;
+    border-radius: 10px;
+    border: none;
+    z-index: 100;
+}
+
+.carousel>.item>.content button:last-child {
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+}
+
+.carousel>.item>.content button:hover {
+    cursor: pointer;
+}
+
+.carousel>.item>.content button:last-child:hover {
+    background-color: white;
+    opacity: 50%;
+    color: black;
+}
+
+/* Thumbnail */
+.thumbnail {
+    z-index: 100;
+    position: absolute;
+    display: flex;
+    width: 40%;
+    right: 1%;
+    bottom: 10%;
+    overflow: hidden;
+    /* Màu trắng mờ với độ trong suốt */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    border: 1px white;
+    /* Hiệu ứng mờ nền */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail>div {
+    z-index: 100;
+    /* Không cho phần tử co lại */
+    flex-shrink: 0;
+    box-sizing: border-box;
+    width: 50%;
+    border-radius: 10px;
+    overflow: hidden;
+    width: calc(50% - 1rem);
+    padding: 2%;
+}
+
+.thumbnail>div:first-child {
+    margin-right: 2rem;
+    /* Khoảng cách giữa hai phần tử div đầu tiên */
+}
+
+.thumbnail>div>img {
+    border-radius: 10px;
+    width: 100%;
+    /* Cho ảnh được bung hết chiều dài */
+    height: 100%;
+    /* Phóng to ảnh sao cho ảnh chiếm hết vùng container */
+    object-fit: fill;
+}
+
+/* Điều hướng trong carousel */
+.side>.dieuHuong {
+    z-index: 100;
+    position: absolute;
+    bottom: 2%;
+    left: 60%;
+}
+
+.side>.dieuHuong>button {
+    border-radius: 50%;
+    border: none;
+    font-size: 2rem;
+    background-color: gray;
+    color: white;
+}
+
+.side>.dieuHuong>button:hover {
+    background-color: #eee;
+    color: #555;
+    cursor: pointer;
+}
+
+/* Animation */
+.carousel>.item:nth-child(1)>.background {
+    animation: showIMG 0.4s linear forwards;
+}
+
+@keyframes showIMG {
+    from {
+        width: 20%;
+        height: auto;
+        bottom: 10%;
+        right: 20%;
+    }
+
+    to {
+        width: 100%;
+        bottom: -20%;
+        right: 0;
+    }
+}
+
+.carousel>.item:nth-child(1)>.content {
+
+    animation: showContent 0.4s 0.4s linear forwards;
+}
+
+@keyframes showContent {
+    from {
+        left: 20%;
+        opacity: 0;
+    }
+
+    to {
+        left: 3%;
+        opacity: 1;
+    }
+}
+
+/* Css cho phần sideBar */
+.sideBar{
+    width: 15vw;
+    position: fixed;
+    top:48%;
+    left:85%;
+}
+.sideBar > ul{
+    display:flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width:20vw;
+}
+.sideBar > ul > li{
+    background-color: #252730;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-right:15px;
+    padding:1rem;
+    width:100%;
+    height:9vh;
+}
+.sideBar > ul > li > div{
+    width: 100%;
+}
+.sideBar > ul > li > div >img{
+    width: 50%;
+    margin-left:25%;
+    padding-top:3px;
+}
+.sideBar > ul > li > span{
+    color: white;
+}
+
+.sideBar > ul >li:hover{
+    background-color: #2d3959;
+    cursor: pointer;
+}
+
+/* Css cho phần gameShow */
+.gameShow{
+    width: 200vw;
+    height: auto;
+    margin:0;
+    margin-top: 10rem;
+    display: flex;
+}
+    /* Css cho phần game */
+.gameShow > .game{
+    width: 200%;
+    display: flex;
+    flex-direction: column;
+}
+.gameShow > .game >.gameItem{
+    width: 100%;
+    height: auto;
+    margin:0 1rem;
+    padding-bottom:5vh;
+    color: white;
+    
+}
+.gameShow > .game >.gameItem > .img > img{
+    width: 100%;
+}
+
+.gameItem > .infor > div{
+    display: flex;
+    font-size: 1.4rem;
+    justify-content: space-between;
+}
+.gameItem >.infor > .name{
+    font-size: 1.7rem;
+    margin-bottom: 0;
+    height: 4rem; /* Chiều cao tối đa dựa trên kích thước của .gameItem */
+    overflow: hidden; /* Ẩn nội dung vượt quá */
+    text-overflow: ellipsis; /* Thêm dấu "..." nếu nội dung bị cắt */
+}
+.gameItem > .infor > div > .sale,
+.gameItem > .infor > div > .pirceSale{
+    display: none;
+}
+
+
+    /* Css cho phần sale */
+.gameItem.sale >.infor > div >.sale,
+.gameItem.sale >.infor > div >.pirceSale{
+    display: none;
+    
+}
+.gameItem.sale >.infor >div >.sale{
+    background-color: #26bbff;
+    border-radius: 10px;
+}
+.gameItem.sale > .infor >div >.price{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+    /* Css cho phần ads */
+.gameShow >.ads{
+    display:none;
+}
+/*CSS cho thanh search*/
+input[type="text"] {
+    width:45%;
+    margin-left:2rem;
+    margin-top:0.1vh;
+    height:6vh;
+    border:none;
+    background-color: #3d3f4c;
+    color:white;
+    font-size:1rem;
+    padding-left:0.5rem;
+}
+input:focus{
+    outline:none;
+}
+.search>i{
+    color:white;
+    cursor:pointer;
+    margin-top:0.01rem;
+    padding: 0.9rem;
+    margin-left:1rem;
+    background-color:#3d3f4c
+}
+/* Responsive CSS cho: footer*/
+footer {
+    margin-top: 2rem;
+    width: 250%;
+    max-width:235vw;
+    align-items: center;
+    text-align: center;
+    background-color: #252730;
+}
+
+.socialmedia {
+    padding: 1rem;
+    position:relative;
+}
+.socialmedia>a.contact {
+    position:absolute;
+    width:5rem;
+    font-size: 1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    text-align:center;
+    right:0;
+    bottom:0;
+}

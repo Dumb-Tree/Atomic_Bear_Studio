@@ -1,0 +1,49 @@
+  body{
+    width:200%;
+    height:200vh;
+}
+.friendlist-container{
+    position:relative;
+    width:100%;
+}
+.friendList{
+    opacity:0;
+    transition: opacity 0.5s;
+    position:absolute;
+    top:11%;
+    left:60%;
+    width:40%;
+    margin:0;
+    background:rgb(42, 45, 53);
+    animation:friendlisthide 0.5s linear;
+    z-index:99;
+}
+.playerMenuContainer{
+    position:relative;
+    width:100%; 
+}
+.playermenu{
+    display:none;
+    position:absolute;
+    right:0;
+    background:rgba(36,36,36, 1);
+    border: 2px solid rgb(113, 187, 230);
+    z-index:9999;
+}
+.show{
+    display:block;
+}
+@media only screen and (max-width: 500px) { /*Responsive cho phone*/
+    .removeFav{
+        width:100% !important;
+    }
+    body{
+        width:200%;
+        height:200vh;
+    }
+    .gameItem{
+        width:25%;
+        height:45vh;
+        margin-bottom:20vh;
+    }
+  }

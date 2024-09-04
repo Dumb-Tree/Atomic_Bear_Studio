@@ -1,0 +1,669 @@
+.side{
+    display: flex;
+}
+
+body{
+    background-color: #191b20;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* Css cho phần nav */
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+nav>ul {
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    background-color: #252730;
+}
+
+nav>ul>li {
+    list-style-type: none;
+}
+
+nav>ul>li:nth-child(3)
+{
+    background-color: #191b20;
+    border-bottom: 1px solid #8791fb    ;
+}
+nav>ul>li:nth-child(5) {
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+nav>ul>li>a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+nav>ul>li>a>p {
+    margin: 0;
+}
+
+.logo {
+    width: 10rem;
+}
+
+.logo>img {
+    width: 100%;
+}
+
+.user {
+    align-items: center;
+}
+
+.userInfor>p {
+    margin: 0;
+    color: #b1b1b5;
+}
+
+.userIMG {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    overflow: hidden;
+}
+
+.userIMG>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*CSS cho thanh search*/
+input[type="text"] {
+    width:38rem;
+    margin-left:5rem;
+    margin-top:0.1vh;
+    height:6vh;
+    border:none;
+    background-color: #3d3f4c;
+    color:white;
+    font-size:1rem;
+    padding-left:0.5rem;
+}
+input:focus{
+    outline:none;
+}
+.search>i{
+    color:white;
+    cursor:pointer;
+    margin-top:0.01rem;
+    padding: 0.95rem;
+    background-color:#3d3f4c
+}
+/* Css cho nav user */
+.user {
+    align-items: center;
+    display: flex;
+
+}
+
+.userInfor>p {
+    margin: 0;
+    color: #b1b1b5;
+    font-size: 1.3rem;
+}
+
+.userIMG {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 3rem;
+    height: 3rem;
+    /* Đặt chiều cao tương ứng với chiều rộng */
+    padding: 0;
+    /* Đảm bảo không có padding */
+    overflow: hidden;
+}
+
+.userIMG>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* CSS cho cài đặt người dùng*/
+.playermenu{
+    display:none;
+    position:absolute;
+    background:rgba(36,36,36, 1);
+    border: 2px solid rgb(113, 187, 230);
+    right:5rem;
+    z-index:999999;
+}
+.menu{
+    list-style-type: none;
+    padding:0;
+    border-top: 1px solid white;
+    margin-top: 0;
+}
+.menu > ul{
+    margin-top: 0;
+}
+.menu>li{
+    padding-top:0.5rem;
+    width:100%;
+}
+.menu>li>a{
+    text-decoration: none;
+    display: block;
+    padding:0.4rem;
+    color:white;
+}
+.menu>li:hover{
+    background-color:rgb(39, 105, 175);
+}
+.show{
+    display:block;
+}
+.userIMG{
+    cursor:pointer;
+}
+.userPic{
+    margin-top:1rem;
+    background-color:rgb(26,27,32);
+    padding-bottom:0.4rem;
+}
+.userPic>img{
+    width:50%;
+    border-radius: 30px;
+    margin-left:25%;
+    padding:1rem;
+    padding-bottom:0.2rem;
+    box-sizing: border-box;
+}
+.username{
+    color:white;
+    width:70%;
+    text-align: center;
+    margin:0;
+    margin-bottom:0.5rem;
+    margin-left:15%;
+    background-color:grey;
+    border-radius: 25px;
+}
+.friendbtn{
+    cursor:pointer;
+    padding:0.5rem;
+}
+.friendList{
+    opacity:0;
+    transition: opacity 0.5s;
+    position:absolute;
+    right:0;
+    top:11%;
+    width:25%;
+    margin:0;
+    background:rgb(42, 45, 53);
+    color:white;
+    animation:friendlisthide 0.5s linear;
+    z-index:9999;
+}
+.showfriend{
+    opacity:1 !important;
+    transition: opacity 0.5s;
+    animation:friendlistshow 0.5s ease-out !important;
+}
+.friends{
+    padding:0;
+    list-style-type: none;
+    text-decoration: none;
+    background-color:#202328;
+}
+.friend{
+    color:white;
+}
+.friendList>h1{
+    text-align:center;
+}
+.friends>li>img{
+    width:5.5rem;
+    padding-right:1rem;
+    padding-left:0.5rem;
+    border-radius:50%;
+}
+.friends>li{
+    padding-bottom:1rem;
+    padding-top:1rem;
+    border-bottom: 1px solid #3c403f;
+}
+.friends>li:hover{
+    background-color:rgb(64, 81, 111);
+}
+.friends>li>span{
+    margin-top:1rem;
+}
+.friends>li>span>i{
+    padding:0.4rem;
+}
+.friends>li>span>i:hover{
+    color:rgb(79, 181, 221);
+    cursor:pointer;
+}
+.friends>li:last-child{
+    border:none;
+}
+@keyframes friendlistshow{
+    from{
+        top:0;
+    }
+    to{
+        top:11%;
+    }
+}
+@keyframes friendlisthide{
+    from{
+        top:11%;
+    }
+    to{
+        top:5%;
+    }
+}
+
+
+
+/* Carousel */
+.side {
+    position: relative;
+    width: 100vw;
+    /* Chiều rộng 80% của viewport width */
+    height: 80vh;
+    /* Chiều cao 80% của viewport height */
+    margin: 2rem 0.7rem 2rem auto;
+}
+
+.side>.carousel {
+    width: 93vw;
+    position: absolute;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    right: 0;
+    top: 0;
+}
+
+.carousel>.item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+/* Chỉ hiện phần tử đầu tiên */
+.carousel>.item:nth-child(1) {
+    display: initial;
+}
+
+
+.carousel>.item>.background {
+    object-fit: contain;
+    filter: brightness(0.7);
+    position: absolute;
+    width: 20%;
+    height: auto;
+    bottom: 10%;
+    right: 20%;
+}
+
+.carousel>.item>.content {
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 1rem;
+    position: absolute;
+    box-sizing: border-box;
+    width: 40%;
+    height: 100%;
+    top: 20%;
+    color: white;
+    mix-blend-mode: hard-light;
+    text-shadow: 1px 4px 3px black;
+    opacity: 0;
+}
+
+.carousel>.item>.content>.logo {
+    width: 50%;
+    height: 25%;
+    top: 0%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.carousel>.item>.content>.logo>img {
+    width: 100%;
+}
+
+.carousel>.item>.content>.available {
+    margin-bottom: 0;
+}
+
+.carousel>.item>.content>.description {
+    width: 100%;
+    height: 15%;
+    overflow: hidden;
+}
+
+.carousel>.item>.content button {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1.3rem 4.5rem;
+    border-radius: 10px;
+    border: none;
+    z-index: 100;
+}
+
+.carousel>.item>.content button:last-child {
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+}
+
+.carousel>.item>.content button:hover {
+    cursor: pointer;
+}
+
+.carousel>.item>.content button:last-child:hover {
+    background-color: white;
+    opacity: 50%;
+    color: black;
+}
+
+/* Thumbnail */
+.thumbnail {
+    z-index: 100;
+    position: absolute;
+    display: flex;
+    width: 40%;
+    right: 1%;
+    bottom: 10%;
+    overflow: hidden;
+    /* Màu trắng mờ với độ trong suốt */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    border: 1px white;
+    /* Hiệu ứng mờ nền */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail>div {
+    z-index: 100;
+    /* Không cho phần tử co lại */
+    flex-shrink: 0;
+    box-sizing: border-box;
+    width: 50%;
+    border-radius: 10px;
+    overflow: hidden;
+    width: calc(50% - 1rem);
+    padding: 2%;
+}
+
+.thumbnail>div:first-child {
+    margin-right: 2rem;
+    /* Khoảng cách giữa hai phần tử div đầu tiên */
+}
+
+.thumbnail>div>img {
+    border-radius: 10px;
+    width: 100%;
+    /* Cho ảnh được bung hết chiều dài */
+    height: 100%;
+    /* Phóng to ảnh sao cho ảnh chiếm hết vùng container */
+    object-fit: fill;
+}
+
+/* Điều hướng trong carousel */
+.side>.dieuHuong {
+    z-index: 100;
+    position: absolute;
+    bottom: 2%;
+    left: 60%;
+}
+
+.side>.dieuHuong>button {
+    border-radius: 50%;
+    border: none;
+    font-size: 2rem;
+    background-color: gray;
+    color: white;
+}
+
+.side>.dieuHuong>button:hover {
+    background-color: #eee;
+    color: #555;
+    cursor: pointer;
+}
+
+/* Animation */
+.carousel>.item:nth-child(1)>.background {
+    animation: showIMG 0.4s linear forwards;
+}
+
+@keyframes showIMG {
+    from {
+        width: 20%;
+        height: auto;
+        bottom: 10%;
+        right: 20%;
+    }
+
+    to {
+        width: 100%;
+        bottom: -20%;
+        right: 0;
+    }
+}
+
+.carousel>.item:nth-child(1)>.content {
+
+    animation: showContent 0.4s 0.4s linear forwards;
+}
+
+@keyframes showContent {
+    from {
+        left: 20%;
+        opacity: 0;
+    }
+
+    to {
+        left: 3%;
+        opacity: 1;
+    }
+}
+
+/* Css cho phần sideBar */
+.sideBar{
+    width: 5vw;
+    position: fixed;
+    top: 15%;
+    left: 1%;
+}
+.sideBar > ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.sideBar > ul > li{
+    background-color: #252730;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 13%;
+    padding-bottom:5px;
+    width:100%;
+    height:9vh;
+}
+.sideBar > ul > li > div{
+    width: 100%;
+}
+.sideBar > ul > li > div >img{
+    width: 50%;
+    margin-left:25%;
+    padding-top:3px;
+}
+.sideBar > ul > li > span{
+    color: white;
+}
+.sideBar > ul > li > div >a>img{
+    width: 50%;
+    margin-left:25%;
+    padding-top:3px;
+}
+.sideBar > ul > li >a> span{
+    color: white;
+}
+
+.sideBar > ul >li:hover{
+    background-color: #2d3959;
+    cursor: pointer;
+}
+
+/* Css cho phần gameShow */
+.gameShow{
+    width: 92vw;
+    height: auto;
+    margin-top: 5rem    ;
+    margin-left: auto;
+    display: flex;
+}
+    /* Css cho phần game */
+.gameShow > .game{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.gameShow > .game >.gameItem{
+    width: 22%;
+    height: 32rem;
+    margin:0 1rem;
+    color: white;
+}
+.gameShow >.game >.gameItem:hover .img{
+    filter: brightness(0.5);
+    cursor: pointer;
+}
+.gameShow > .game >.gameItem > .img > img{
+    width: 100%;
+}
+
+.gameItem > .infor > div{
+    display: flex;
+    font-size: 1.4rem;
+    justify-content: space-between;
+}
+.gameItem >.infor > .name{
+    font-size: 1.7rem;
+    margin-bottom: 0;
+    height: 4rem; /* Chiều cao tối đa dựa trên kích thước của .gameItem */
+    overflow: hidden; /* Ẩn nội dung vượt quá */
+    text-overflow: ellipsis; /* Thêm dấu "..." nếu nội dung bị cắt */
+}
+.gameItem > .infor > div > .sale,
+.gameItem > .infor > div > .pirceSale{
+    display: none;
+}
+.addFav{
+    margin-top:0.3rem;
+    padding:0.3rem;
+    border-radius:10px;
+    background-color:#26bbff;
+    cursor:pointer;
+    color:white;
+    font-size:1.5rem;
+    margin: 1rem 0;
+}
+.addFav:hover{
+    border-radius:10px;
+    background-color:#64ceff;
+}
+    /* Css cno phần sale */
+.gameItem.sale >.infor > div >.sale,
+.gameItem.sale >.infor > div >.pirceSale{
+    display: initial;
+}
+.gameItem.sale >.infor >div >.sale{
+    background-color: #26bbff;
+    border-radius: 10px;
+}
+.gameItem.sale > .infor >div >.price{
+    text-decoration: line-through;
+    color: grey;
+}
+.playbtn{
+    background-color:rgb(75, 184, 75);
+    padding-right:0.5rem;
+    padding-left:0.5rem;
+    cursor:pointer;
+    border-radius:10px;
+
+}
+    /* Css cho phần ads */
+.gameShow >.ads{
+    width: 20%;
+}
+.gameShow >.ads>div{
+    width: 100%;
+    position: -webkit-sticky;
+    position:sticky;
+    top:0;
+    z-index: 100;
+    bottom: 30%;
+    right: 1%;
+
+}
+.gameShow >.ads>div>img{
+    width: 100%;
+}
+/* CSS cho phan footer*/
+footer {
+    margin-top: 2rem;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    background-color: #252730;
+    color:white;
+}
+
+.socialmedia {
+    padding: 1rem;
+}
+
+.socialmedia>a {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    width: 2%;
+    text-align: center;
+    text-decoration: none;
+    color: #6b6b6f;
+}
+.socialmedia>a:last-child {
+    margin-top:2.5rem;
+    padding:0;
+}
+
+.socialmedia>a:hover {
+    color: white;
+}
+
+.socialmedia>a.contact {
+    width:10rem;
+    font-size: 1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    position:absolute;
+    right:0rem;
+}

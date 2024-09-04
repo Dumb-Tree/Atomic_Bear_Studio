@@ -1,0 +1,425 @@
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+body {
+    background-color: #191b20;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    height:100%;
+    width:229vw;
+}
+.main{
+    width:100%;
+}
+/* Responsive CSS cho: phần nav */        
+nav{
+    margin:0;
+    padding:0;
+    width:100%;
+    max-width:235vw;
+    }
+/*Responsive `CSS cho: cài đặt người dùng*/
+.playerMenuContainer{
+    position:relative;
+    width:100%; 
+}
+.playermenu{
+    display:none;
+    position:absolute;
+    right:0;
+    background:rgba(36,36,36, 1);
+    border: 2px solid rgb(113, 187, 230);
+    z-index:9999;
+}
+.show{
+    display:block;
+}
+/*Responsive CSS cho: bạn bè*/
+.friendlist-container{
+    position:relative;
+    width:100%;
+}
+.friendList{
+    opacity:0;
+    transition: opacity 0.5s;
+    position:absolute;
+    top:11%;
+    left:60%;
+    width:40%;
+    margin:0;
+    background:rgb(42, 45, 53);
+    animation:friendlisthide 0.5s linear;
+    z-index:99;
+}
+/* Responsive CSS cho: phần new */
+.New {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.New>h1 {
+    color: white;
+    margin: 1rem;
+}
+
+.largeNew {
+    width: 47%;
+    box-sizing: border-box;
+    margin: 0.1%;
+}
+
+.largeNews {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid white;
+    padding-bottom: 2rem;
+}
+
+.largeNewImg>img {
+    width: 100%;
+}
+
+.largeNewImg>img {
+    border-radius: 10px;
+}
+
+.largeNew>p {
+    color: white;
+}
+
+.largeNew>a {
+    color: red;
+}
+
+/* Tạo khung dữ liệu cho phần title */
+.largeNew>.largeNewTitle {
+    width: 100%;
+    height: 6.5rem;
+    overflow: hidden;
+    padding-left: 0.5rem;
+}
+
+.largeNew>.largeNewTitle>h2 {
+    color: white;
+    font-weight: bold;
+    text-wrap: wrap;
+}
+
+/* Tạo khung dữ liêu cho phần p */
+.largeNew>.largeNewP {
+    width: 100%;
+    height: 5.5rem;
+    overflow: hidden;
+}
+
+.largeNew>.largeNewP>p {
+    color: white;
+    font-weight: lighter;
+    text-wrap: wrap;
+}
+
+/* Tạo khung dữ liệu cho tilte small new */
+.smallNew>.smallNewTitle {
+    width: 100%;
+    height: 13rem;
+}
+
+.smallNew>.smallNewTitle>h2 {
+    color: white;
+    text-wrap: wrap;
+}
+
+.smallNews {
+    display: flex;
+    justify-content: space-around;
+}
+
+.smallNewImg>img {
+    width: 100%;
+}
+
+.smallNew>p {
+    color: white;
+}
+
+.smallNew {
+    border-radius: 10px;
+    width: 22%;
+    margin: 0.1%;
+}
+
+.smallNew>h2 {
+    color: white;
+    font-weight: bold;
+}
+
+.smallNew>a {
+
+    color: red;
+}
+
+/* Responsive CSS cho: phần banner */
+.slideshow {
+    margin-top: 2rem;
+    margin-left:15rem;
+    width: 100%;
+    height: 45%;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom:0;
+
+}
+@media screen and (max-width:600px){
+    .slideshow{
+        margin-left:10rem !important;
+    }
+    nav{
+        width:150%;
+    }
+    footer{
+        width:150%;
+    }
+}
+
+div.Den{
+    display:none;
+}
+
+.container {
+    display:none;
+}
+.image>img {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.image {
+    width: 40%;
+    box-sizing: border-box;
+}
+
+  /* Slideshow container */
+  .slideshow-container {
+    width:100%;
+    position: relative;
+  }
+  .flex{
+      display:flex;
+  }
+  ul.gamelist{
+      list-style-type: none;
+  }
+  ul.gamelist>li{
+      width:100%;
+      height:100%;
+      padding:0.5rem;
+      overflow:hidden;
+      cursor:pointer;
+  }
+  .gameSlides1,.gameSlides2 {
+    display: none
+  }
+  ul.gamelist>li>img{
+      width:100%;
+      vertical-align: middle;
+  }
+  /* next and previous button */
+  .prev, .next {
+    cursor: pointer;
+    width: auto;
+    padding: 1rem;
+    left:65.5%;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .btns{
+    width:30%;
+    position:relative;
+    margin-left:10%;
+    margin-right:0;
+  }
+  .btns>a{
+    margin-right:0;
+    margin-left:auto;
+    font-size:2rem;
+  }
+  .text {
+    color: #ffffff;
+    font-size: 0.9rem;
+    position: relative;
+    padding-top:10px;
+    text-align:left;
+    white-space:nowrap; /*Bất kì dãy khoảng trắng nào cũng sẽ bị đưa về là 1 và ngăn chữ tràn xuống dòng 2*/
+    overflow:hidden;
+    text-overflow: ellipsis; /* biến dòng chữ tràn ra thành "..."*/
+  }
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: .4
+    } 
+    to {
+      opacity: 1
+    }
+  }
+  
+  /* @ */
+  @media only screen and (max-width: 319px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+  .listTitle{
+      margin-top: 1rem;
+      width:90%;
+      margin-left:8rem;
+  }
+  .listTitle>span{
+      font-size:1.5rem;
+      color:white;
+  }
+/* Responsive CSS cho: mục game*/
+div.Games>ul{
+    list-style-type:none;
+    padding:0;
+}
+div.Games>ul>li>img{
+    position:relative;
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+div.Games>ul>li{
+    width:100%;
+    padding:0.5rem;
+    padding-bottom:0;
+    overflow:hidden;
+    position:relative;
+}
+div.Games>ul>li:first-child{
+    width:100%;
+    padding-left:0;
+}
+@keyframes leanback{
+    from{
+        transform:rotateX(0deg)
+    }
+    to{
+        transform:rotateX(30deg)
+    }
+}
+/* Repsonsive CSS cho: footer*/
+footer {
+    margin-top: 2rem;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    background-color: #252730;
+    }
+    
+    .socialmedia {
+    padding: 1rem;
+    position:relative;
+    }
+    .socialmedia>a.contact {
+    position:absolute;
+    width:5rem;
+    font-size: 1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    text-align:center;
+    right:0;
+    bottom:0;
+    }
+.hotgames {
+    z-index: 100;
+    display: flex;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .hotgame {
+    flex: 1;
+    box-sizing: border-box;
+    height: 25%;
+    margin: 1rem;
+    /* Tạo hiệu ứng 3d */
+    perspective: 2500px;
+    position: relative;
+
+  }
+  .hotgame img {
+    width: 100%;
+  }
+
+  .hotgame>.background {
+    transition: transform 0.6s;
+  }
+  .hotgame>.tenGame {
+    position: absolute;
+    left: 0;
+    bottom: -2.2rem;
+    opacity: 1;
+    /* Tạo thời gian cho tên game di chuyển lên */
+    transition: transform 0.5s 0.1s;
+  }
+  .hotgame>.modal {
+    top: 0;
+    left: 0;
+    position: absolute;
+    opacity: 0;
+    /* Tạo thời gian cho modal di chuyển lên */
+    transition: transform 0.6s;
+  }
+
+  /* Hover */
+  .hotgame:hover .background {
+    /* Tạo hiệu ứng lật thẻ */
+    transform: rotateX(30deg);
+    filter: brightness(0.2);
+    /* Giảm độ sáng để giữ màu */
+    box-shadow: 0px 30px 20px rgba(0, 0, 0, 0.9);
+  }
+
+  .hotgame:hover .tenGame {
+    opacity: 1;
+    transform: translateY(-4rem);
+  }
+  .hotgame:hover .modal {
+    opacity: 1;
+    transform: translateY(-2rem);
+  }
+
+  /* Thoát hover */
+  .hotgame:not(:hover) .tenGame
+  {
+    /* Về lại vị trí cũ */
+    transform: translateY(0); 
+    opacity: 0;
+    /* Chỉnh tốc độ của opacity */
+    transition: transform 0.6s, opacity 0.6s ease;
+    
+  } 
+  .hotgame:not(:hover) .modal {
+    transform: translateY(0);
+    opacity: 0;
+    transition: transform 0.6s, opacity 0.6s ease;
+  }
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="../CSS_BTL/login.css">
+    <link rel="stylesheet" href="../CSS_BTL/login_mobile.CSS" media="screen and (max-width:769px)"/>
+    <script src="../JS_BTL/JS_Login.js"></script>
+    <title>Login</title>
+</head>
+<body>
+    <div class="login">
+        <div class="logo">
+            <img src="../Images_Btl/revoltglogo.png" alt="logo">
+        </div>
+        <p>"Hãy thỏa mãn hết mình với đam mê của bạn"</p>
+       
+        <div class="loginTable">
+            <form id="loginInfo">
+            <div class="loginTableItem">
+                <div class="loginField"> 
+                    <label for="Username"><i class="ri-user-line"></i></label>
+                    <input type="text" id="Username" placeholder="Tên đăng nhập">
+                </div>
+            </div>
+            <div class="loginTableItem">
+                <div class="loginField">
+                    <label for="Password"><i class="ri-key-fill"></i></label>
+                    <input type="password" id="Password" placeholder="Mật khẩu">
+                </div>
+            </div>
+        </div>
+        <div class="autoLogin">
+            <input id="autoLoginCheck" type="checkbox"> 
+            <label for="autoLoginCheck">Tự động đăng nhập</label>
+        </div>
+        <a>
+        <button id="submit" type="submit">ĐĂNG NHẬP</button></a>
+         </form>
+        <div class="aside">
+            <div class="asideItem">
+                <a href="#">Chưa có tài khoản?</a>
+            </div>
+            <div class="asideItem">
+                <a href="#">Quên mật khẩu?</a>
+            </div>
+        </div>
+        <p class="version">v.2.24.208.12</p>
+    </div>
+</body>
+
+</html>
