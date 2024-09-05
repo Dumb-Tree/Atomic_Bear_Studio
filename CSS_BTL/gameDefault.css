@@ -453,3 +453,41 @@ nav>ul>li>a>p {
     text-align: right;
     /* Căn phải văn bản trong các ô */
 }
+/* CSS cho phan footer*/
+footer {
+    margin-top: 2rem;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    background-color: #252730;
+}
+
+.socialmedia {
+    padding: 1rem;
+}
+
+.socialmedia>a {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    width: 2%;
+    text-align: center;
+    text-decoration: none;
+    color: #6b6b6f;
+}
+.socialmedia>a:last-child {
+    margin-top:2.5rem;
+    padding:0;
+}
+
+.socialmedia>a:hover {
+    color: white;
+}
+
+.socialmedia>a.contact {
+    width:10rem;
+    font-size: 1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    position:absolute;
+    right:0rem;
+}
